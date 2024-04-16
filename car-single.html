@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoCar - Free Bootstrap Website Template for Car Rental</title>
+
+  <!--vendor css ================================================== -->
+  <link rel="stylesheet" type="text/css" href="css/vendor.css">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <!--Bootstrap ================================================== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
+  <!-- Style Sheet ================================================== -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- Google Fonts ================================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Raleway:wght@400;700&display=swap"
+    rel="stylesheet">
+
+
+  <!-- script ================================================== -->
+  <script src="js/modernizr.js"></script>
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
+
+ <!-- Header -->
+ <nav class="navbar navbar-expand-lg  navbar-light container-fluid py-3 position-fixed ">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav align-items-center justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active px-3" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="cars.html">Cars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#action">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex mt-5 mt-lg-0 ps-xl-5 align-items-center justify-content-center ">
+                    <ul class="navbar-nav justify-content-end align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Login </a>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn btn-outline-primary nav-button mx-3" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal2"> Sign in </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+  <!-- hero section start  -->
+  <section id="hero" class=" position-relative overflow-hidden">
+    <div class="pattern-overlay pattern-right position-absolute">
+      <img src="images/hero-pattern-right.png" alt="pattern">
+    </div>
+    <div class="pattern-overlay pattern-left position-absolute">
+      <img src="images/hero-pattern-left.png" alt="pattern">
+    </div>
+    <div class="container py-5 mt-5">
+      <div class="row my-5">
+        <h2 class="mt-5">BMW x3</h2>
+
+        <div class="d-flex ">
+          <p class="fs-5 ">Lectus adipiscing est auctor</p>
+          <p style="color: #94CA21">&nbsp; | &nbsp;</p>
+          <p class=" fs-5 fw-semibold"> For Rent </p>
+          <p style="color: #94CA21">&nbsp; | &nbsp;</p>
+          <p class=" fs-5 fw-semibold"> Price : $9000 / day</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Chi tiết thuê -->
+  <div class="post-wrap  no-padding-bottom">
+    <div class="container">
+
+      <div class="row my-5 g-5">
+        <main class="post-grid col-md-9">
+          <div class="row">
+            <article class="property">
+
+              <div class="row flex-column">
+                <div class="col-md-12">
+                  <!-- product-large-slider -->
+                  <div class="swiper product-large-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="images/item-large8.jpg" alt="product-large" class="img-fluid">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="images/item-large5.jpg" alt="product-large" class="img-fluid">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="images/item-large4.jpg" alt="product-large" class="img-fluid">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="images/item-large9.jpg" alt="product-large" class="img-fluid">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="images/item-large1.jpg" alt="product-large" class="img-fluid">
+                      </div>
+
+                    </div>
+                  </div>
+                  <!-- / product-large-slider -->
+                </div>
+                <div class="col-md-12 mt-2">
+                  <!-- product-thumbnail-slider -->
+                  <div thumbsSlider="" class="swiper product-thumbnail-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="images/blog8.jpg" alt="image" class="thumb-image img-fluid">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="images/blog5.jpg" alt="image" class="thumb-image img-fluid">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="images/blog4.jpg" alt="image" class="thumb-image img-fluid">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="images/blog9.jpg" alt="image" class="thumb-image img-fluid">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="images/blog1.jpg" alt="image" class="thumb-image img-fluid">
+                      </div>
+
+                    </div>
+                  </div>
+                  <!-- / product-thumbnail-slider -->
+                </div>
+
+              </div>
+
+              <div class="post-content py-5">
+
+                <div class="overview my-5">
+                  <h3 class="fs-2 mb-4">Vehicle Overview</h3>
+
+                  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 mt-1">
+                    <div class="col d-flex align-items-start">
+                      <iconify-icon icon="fa-solid:car" class="property-icon border rounded-2 p-3"></iconify-icon>
+                      <div class="ms-4 mt-2">
+                        <h6 class="fw-bold mb-0 mt-1 fs-6 text-body-emphasis">Body</h6>
+                        <p>BMW x3</p>
+                      </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+                      <iconify-icon icon="healthicons:clean-hands"
+                        class="property-icon border rounded-2 p-3"></iconify-icon>
+                      <div class="ms-4 mt-2">
+                        <h6 class="fw-bold mb-0 mt-1 fs-6 text-body-emphasis">Make</h6>
+                        <p>Nisssan</p>
+                      </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+                      <iconify-icon icon="fluent:transmission-20-filled"
+                        class="property-icon border rounded-2 p-3"></iconify-icon>
+                      <div class="ms-4 mt-2">
+                        <h6 class="fw-bold mb-0 mt-1 fs-6 text-body-emphasis">Transmission</h6>
+                        <p>Automatic</p>
+                      </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+                      <iconify-icon icon="bi:fuel-pump" class="property-icon border rounded-2 p-3"></iconify-icon>
+                      <div class="ms-4 mt-2">
+                        <h6 class="fw-bold mb-0 mt-1 fs-6 text-body-emphasis">Fuel Type</h6>
+                        <p>Diesel</p>
+                      </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+                      <iconify-icon icon="material-symbols:speed-outline"
+                        class="property-icon border rounded-2 p-3"></iconify-icon>
+                      <div class="ms-4 mt-2">
+                        <h6 class="fw-bold mb-0 mt-1 fs-6 text-body-emphasis">Mileage</h6>
+                        <p>16 Km</p>
+                      </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+                      <iconify-icon icon="mdi:steering" class="property-icon border rounded-2 p-3"></iconify-icon>
+                      <div class="ms-4 mt-2">
+                        <h6 class="fw-bold mb-0 mt-1 fs-6 text-body-emphasis">Drivetrian</h6>
+                        <p>Front Wheel
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+                      <iconify-icon icon="raphael:acw" class="property-icon border rounded-2 p-3"></iconify-icon>
+                      <div class="ms-4 mt-2">
+                        <h6 class="fw-bold mb-0 mt-1 fs-6 text-body-emphasis">AC</h6>
+                        <p>Air Condition</p>
+                      </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+                      <iconify-icon icon="solar:calendar-linear"
+                        class="property-icon border rounded-2 p-3"></iconify-icon>
+                      <div class="ms-4 mt-2">
+                        <h6 class="fw-bold mb-0 mt-1 fs-6 text-body-emphasis">Year</h6>
+                        <p>2018</p>
+                      </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+                      <iconify-icon icon="game-icons:car-door"
+                        class="property-icon border rounded-2 p-3"></iconify-icon>
+                      <div class="ms-4 mt-2">
+                        <h6 class="fw-bold mb-0 mt-1 fs-6 text-body-emphasis">Door</h6>
+                        <p>4 Doors</p>
+                      </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+                      <iconify-icon icon="mdi:car-brake-worn-linings"
+                        class="property-icon border rounded-2 p-3"></iconify-icon>
+                      <div class="ms-4 mt-2">
+                        <h6 class="fw-bold mb-0 mt-1 fs-6 text-body-emphasis">Brake</h6>
+                        <p>ABS
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+                      <iconify-icon icon="icon-park:oceanengine"
+                        class="property-icon border rounded-2 p-3"></iconify-icon>
+                      <div class="ms-4 mt-2">
+                        <h6 class="fw-bold mb-0 mt-1 fs-6 text-body-emphasis">Engine (Hp)
+                        </h6>
+                        <p>3,000</p>
+                      </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+                      <iconify-icon icon="fa6-solid:car-rear" class="property-icon border rounded-2 p-3"></iconify-icon>
+                      <div class="ms-4 mt-2">
+                        <h6 class="fw-bold mb-0 mt-1 fs-6 text-body-emphasis">VIN</h6>
+                        <p>45456444</p>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+                <hr>
+                <div class="price my-5">
+                  <h3 class=" fs-2 mb-4">Price Details</h3>
+                  <p> <span class="fw-bold  ">Rent/Day :</span> 9000 (negotiable)</p>
+                  <p> <span class="fw-bold  ">Rent/Month :</span> 30,000 (negotiable)</p>
+                  <p> <span class="fw-bold  ">Service Charge :</span> 500 (service providing)</p>
+                  <p> <span class="fw-bold  ">Extra Service :</span> As per Service taken</p>
+                  <p> <span class="fw-bold  ">Security Deposit :</span> 1500 </p>
+
+                </div>
+                <hr>
+                
+                <hr>
+                
+              </div>
+            </article>
+          </div>
+        </main>
+        
+      </div>
+    </div>
+  </div>
+
+ <!-- Footer -->
+ <section id="footer">
+    <div class="container footer-container mt-5">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 my-5 py-5 ">
+
+            <div class=" col-md-4 mt-5 mt-md-0 ">
+                <img src="images/logo.png" alt="image">
+                <p class="py-3">Vel non nibh vestibulum massa ullam corper bib endum ultrices venenatis, id id sed
+                    mass.</p>
+                <div class="d-flex align-items-center ">
+                    <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
+                            icon="mdi:facebook"></iconify-icon></a>
+                    <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
+                            icon="mdi:twitter"></iconify-icon></a>
+                    <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
+                            icon="mdi:instagram"></iconify-icon></a>
+                    <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
+                            icon="mdi:linkedin"></iconify-icon></a>
+                    <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
+                            icon="mdi:youtube"></iconify-icon></a>
+                </div>
+
+            </div>
+
+            <div class="col-md-7 offset-md-1 mt-5">
+                <ul class="footer-nav list-unstyled ">
+                    <li class="nav-item me-2 mb-3">
+                        <a class="nav-link px-4" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item me-2 mb-3">
+                        <a class="nav-link px-4" href="#">Booking</a>
+                    </li>
+                    <li class="nav-item me-2 mb-3">
+                        <a class="nav-link px-4" href="#">About</a>
+                    </li>
+                    <li class="nav-item me-2 mb-3">
+                        <a class="nav-link px-4" href="#">Cars</a>
+                    </li>
+                    <li class="nav-item me-2 mb-3">
+                        <a class="nav-link px-4" href="#">Services</a>
+                    </li>
+                    <li class="nav-item me-2 mb-3">
+                        <a class="nav-link px-4" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+        </footer>
+    </div>
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center border-top"></footer>        
+</section>
+
+  <!-- script ================================================== -->
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+
+</body>
+
+</html>
