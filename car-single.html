@@ -34,7 +34,7 @@
 
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
+<body data-bs-spy="scroll" data-bs-target="#header-nav">
 
  <!-- Header -->
  <nav class="navbar navbar-expand-lg  navbar-light container-fluid py-3 position-fixed ">
@@ -90,17 +90,17 @@
 
   <!-- hero section start  -->
   <section id="hero" class=" position-relative overflow-hidden">
+
     <div class="pattern-overlay pattern-right position-absolute">
-      <img src="images/hero-pattern-right.png" alt="pattern">
+      <img src="images/hero-pattern-right.png">
     </div>
     <div class="pattern-overlay pattern-left position-absolute">
-      <img src="images/hero-pattern-left.png" alt="pattern">
+      <img src="images/hero-pattern-left.png" >
     </div>
     <div class="container py-5 mt-5">
       <div class="row my-5">
         <h2 class="mt-5">BMW x3</h2>
-
-        <div class="d-flex ">
+        <div class="d-flex">
           <p class="fs-5 ">Thuê ngay để nhận được ưu đãi mới nhất!</p>
           <p style="color: #94CA21">&nbsp; | &nbsp;</p>
           <p class=" fs-5 fw-semibold"> Giá ưu đãi : $9000 / ngày</p>
@@ -108,20 +108,31 @@
       </div>
     </div>
   </section>
+
+
   <!-- Chi tiết thuê -->
-  <div class="post-wrap  no-padding-bottom">
+  <div class="no-padding-bottom">
     <div class="container">
-
+      <!-- row: tạo 1 hàng -->
+      <!-- g-5: tạo khoảng cách giữa các cột -->
       <div class="row my-5 g-5">
-        <main class="post-grid col-md-9">
+        <!-- thẻ main: phần chính của trang web -->
+        <main class="col-md-9">
           <div class="row">
+            <!-- Thẻ artical: bao bọc một nọi dung độc lập-->
+            <!-- property: ????? -->
             <article class="property">
+              <!-- row: tạo 1 hàng -->
+              <div class="row">
+                <!-- Chiếm hết 1 row -->
+                <div class="col-md-12"> 
+                  <!-- product-large-slider: Slide to đùng -->
+                  <!-- Tạo 1 swiper -->
 
-              <div class="row flex-column">
-                <div class="col-md-12">
-                  <!-- product-large-slider -->
                   <div class="swiper product-large-slider">
+                    <!-- swiper-wrapper: chứa các slide -->
                     <div class="swiper-wrapper">
+                      <!-- swiper-slide: slide -->
                       <div class="swiper-slide">
                         <img src="images/item-large8.jpg" alt="product-large" class="img-fluid">
                       </div>
@@ -142,10 +153,16 @@
                   </div>
                   <!-- / product-large-slider -->
                 </div>
+
+                <!-- col-md-12: chiếm hết 1 hàng -->
                 <div class="col-md-12 mt-2">
                   <!-- product-thumbnail-slider -->
+                  <!-- thumbsLider: tạo hiệu ứng tự chuyển ảnh -->
+                  <!-- ???? -->
                   <div thumbsSlider="" class="swiper product-thumbnail-slider">
+                    <!-- swiper-wrapper: chứa các slide -->
                     <div class="swiper-wrapper">
+                      <!-- swiper-slide: slide -->
                       <div class="swiper-slide">
                         <img src="images/blog8.jpg" alt="image" class="thumb-image img-fluid">
                       </div>
@@ -168,21 +185,35 @@
                 </div>
 
               </div>
+              
 
-              <div class="post-content py-5">
-
-                <div class="overview my-5">
+              <div class="py-5">
+                <div class="my-5">
+                  <!-- fonts size, margin bottom -->
                   <h3 class="fs-2 mb-4">Tổng quan</h3>
-
+                  <!-- row: tạo 1 hàng -->
+                  <!-- row-cols-1: 1 cột trên 1 hàng -->
+                  <!-- row-cols-sm-2: 2 cột trên 1 hàng khi màn hình >= 576px -->
+                  <!-- row-cols-md-4: 4 cột trên 1 hàng khi màn hình >= 768px -->
+                  <!-- g-4: khoảng cách giữa các cột -->
                   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 mt-1">
-                    <div class="col d-flex align-items-start">
+                    <!-- col: cột -->
+                    <!-- d-flex: flex theo chiều ngang -->
+                    <!-- align-items-start: căn chỉnh theo chiều dọc -->
+                    <div class="col d-flex ">
+                      <!-- border: tạo viền -->
+                      <!-- rounded-2: bo tròn viền -->
+                      <!-- p-3: padding 3 -->
                       <iconify-icon icon="fa-solid:car" class="property-icon border rounded-2 p-3"></iconify-icon>
+                      <!-- margin-left: 4 -->
+                      <!-- margin-top: 2 -->
                       <div class="ms-4 mt-2">
+                        <!-- font weight -->
                         <h6 class="fw-bold mb-0 mt-1 fs-6 text-body-emphasis">Thân xe</h6>
                         <p>BMW x3</p>
                       </div>
                     </div>
-                    <div class="col d-flex align-items-start">
+                    <div class="col d-flex">
                       <iconify-icon icon="healthicons:clean-hands"
                         class="property-icon border rounded-2 p-3"></iconify-icon>
                       <div class="ms-4 mt-2">
@@ -190,7 +221,7 @@
                         <p>Nisssan</p>
                       </div>
                     </div>
-                    <div class="col d-flex align-items-start">
+                    <div class="col d-flex">
                       <iconify-icon icon="fluent:transmission-20-filled"
                         class="property-icon border rounded-2 p-3"></iconify-icon>
                       <div class="ms-4 mt-2">
@@ -198,14 +229,14 @@
                         <p>Tự động</p>
                       </div>
                     </div>
-                    <div class="col d-flex align-items-start">
+                    <div class="col d-flex">
                       <iconify-icon icon="bi:fuel-pump" class="property-icon border rounded-2 p-3"></iconify-icon>
                       <div class="ms-4 mt-2">
                         <h6 class="fw-bold mb-0 mt-1 fs-6 text-body-emphasis">Loại dầu</h6>
                         <p>Diesel</p>
                       </div>
                     </div>
-                    <div class="col d-flex align-items-start">
+                    <div class="col d-flex">
                       <iconify-icon icon="material-symbols:speed-outline"
                         class="property-icon border rounded-2 p-3"></iconify-icon>
                       <div class="ms-4 mt-2">
@@ -213,7 +244,7 @@
                         <p>16 Km</p>
                       </div>
                     </div>
-                    <div class="col d-flex align-items-start">
+                    <div class="col d-flex">
                       <iconify-icon icon="mdi:steering" class="property-icon border rounded-2 p-3"></iconify-icon>
                       <div class="ms-4 mt-2">
                         <h6 class="fw-bold mb-0 mt-1 fs-6 text-body-emphasis">Vô lăng</h6>
@@ -221,14 +252,14 @@
                         </p>
                       </div>
                     </div>
-                    <div class="col d-flex align-items-start">
+                    <div class="col d-flex">
                       <iconify-icon icon="raphael:acw" class="property-icon border rounded-2 p-3"></iconify-icon>
                       <div class="ms-4 mt-2">
                         <h6 class="fw-bold mb-0 mt-1 fs-6 text-body-emphasis">AC</h6>
                         <p>Điều hoà</p>
                       </div>
                     </div>
-                    <div class="col d-flex align-items-start">
+                    <div class="col d-flex">
                       <iconify-icon icon="solar:calendar-linear"
                         class="property-icon border rounded-2 p-3"></iconify-icon>
                       <div class="ms-4 mt-2">
@@ -236,7 +267,7 @@
                         <p>2018</p>
                       </div>
                     </div>
-                    <div class="col d-flex align-items-start">
+                    <div class="col d-flex">
                       <iconify-icon icon="game-icons:car-door"
                         class="property-icon border rounded-2 p-3"></iconify-icon>
                       <div class="ms-4 mt-2">
@@ -244,7 +275,7 @@
                         <p>4 cửa</p>
                       </div>
                     </div>
-                    <div class="col d-flex align-items-start">
+                    <div class="col d-flex">
                       <iconify-icon icon="mdi:car-brake-worn-linings"
                         class="property-icon border rounded-2 p-3"></iconify-icon>
                       <div class="ms-4 mt-2">
@@ -253,7 +284,7 @@
                         </p>
                       </div>
                     </div>
-                    <div class="col d-flex align-items-start">
+                    <div class="col d-flex ">
                       <iconify-icon icon="icon-park:oceanengine"
                         class="property-icon border rounded-2 p-3"></iconify-icon>
                       <div class="ms-4 mt-2">
@@ -262,7 +293,7 @@
                         <p>3,000</p>
                       </div>
                     </div>
-                    <div class="col d-flex align-items-start">
+                    <div class="col d-flex">
                       <iconify-icon icon="fa6-solid:car-rear" class="property-icon border rounded-2 p-3"></iconify-icon>
                       <div class="ms-4 mt-2">
                         <h6 class="fw-bold mb-0 mt-1 fs-6 text-body-emphasis">Số hiệu</h6>
@@ -299,11 +330,18 @@
  <!-- Footer -->
  <section id="footer">
     <div class="container footer-container mt-5">
+      <!-- footer: xác định footer -->
+      <!-- row: tạo row -->
+      <!-- row-cols-1 : 1 cột trên 1 hàng-->
+      <!-- row-cols-sm-2 : 2 cột trên 1 hàng khi màn hình >= 576px-->
+      <!-- row-cols-md-5 : 5 cột trên 1 hàng khi màn hình >= 768px-->
         <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 my-5 py-5 ">
-
+          <!-- col-md-4 : chiếm 4 cột màn md-->
+          <!-- mt-5 mt-md-0 : margin top 5, màn hình md trở lên margin top 0-->
             <div class=" col-md-4 mt-5 mt-md-0 ">
                 <img src="images/logo.png" alt="image">
                 <p class="py-3">Chuyên nghiệp từng dặm đường đi - Cho mỗi hành trình của bạn!</p>
+                <!-- d-flex: flex theo chiều ngnag -->
                 <div class="d-flex align-items-center ">
                     <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
                             icon="mdi:facebook"></iconify-icon></a>

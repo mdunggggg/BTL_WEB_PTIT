@@ -1,23 +1,4 @@
-/*
-Theme Name: GoCar
-Theme URL: 
-Author: TemplatesJungle
-Author URL: https://templatesjungle.com/
-Description: GoCar is a Free Bootstrap Website Template for Car Rental by TemplatesJungle.
-Version: 1.0
-*/
 
-/*--------------------------------------------------------------
-This is main CSS file that contains custom style rules used in this template
---------------------------------------------------------------*/
-
-/*------------------------------------*\
-    Table of contents
-\*------------------------------------*/
-
-
-/** Base Styles
---------------------------------------------------------------*/
 :root {
   --accent-color: #94CA21;
   --secondary-color: #79A6DE;

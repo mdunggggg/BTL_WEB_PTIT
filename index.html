@@ -33,30 +33,51 @@
     <script src="js/modernizr.js"></script>
 
 </head>
-
-<body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
+<!-- Để sử dụng scrollspy trong bootstrap, là tính năng giúp làm nổi bật các phần tử trong thanh điều hướng,
+     nó theo dõi vị trí người dùng và làm nổi bật các item đấy trong thanh điều hướng có id: header-nav -->
+<body data-bs-spy="scroll" data-bs-target="#header-nav" >
     <!-- Header -->
+    <!-- Chỉ định navbar sẽ mở rộng khi màn hình lớn, còn khi màn hình nhỏ sẽ có một button để ẩn hiện navbar -->
+    <!-- container-fuid: căn sao cho vừa size chiều rộng màn hình-->
+    <!-- py-3: padding theo chiều y 3rem : 1 rem = 16px -->
+    <!-- position-fixed: cố định navbar ở trên cùng của trang web -->
     <nav class="navbar navbar-expand-lg  navbar-light container-fluid py-3 position-fixed ">
         <div class="container">
+            <!-- Thẻ a: tạo ra một liên kết đến index.html, có icon là logp -->
+            <!-- navbar-brand: được sử dụng để định dạng các phần tử là nhãn hiệu hoặc logo trong thanh điều hướng của thanh navbar. -->
             <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar">
+            <!--Định nghĩa 1 button toggle để mở rộng nav khi ở màn hình nhỏ, khi bấm vào nó sẽ hiện navbar   -->
+            <!-- data-bs-toggle: xác định hành động được nhấn -> đóng mở offcanvas menu có id là target -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
+            <!-- Định nghĩa 1 offcanvas menu -->
+            <!-- offcanvas-end: đặt offcanvas menu ở bên phải -->
+            <!-- tabindex="-1": cho phép offcanvas menu có thể được trỏ tới bằng cách ấn nút tab trên bàn phím -->
+            <!-- aria-labelledby: xác định id của phần tử mà offcanvas menu sẽ được mở ra -->
+            <div class="offcanvas offcanvas-end"  id="offcanvasNavbar">
+                <!-- offcanvas-header:  đại diện header của menu-->
+                <!-- data-bs-dismiss: khi an thì sẽ tắt menu -->
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
                 </div>
                 <div class="offcanvas-body">
+                    <!-- Thẻ ul: tạo danh sách các mục không có thư tự -->
+                    <!-- navbar-nav: định dạng các phần tử là một danh sách các mục trong thanh điều hướng của thanh navbar. -->
+                    <!-- align-items-center: căn giữa các phần tử theo chiều ngang -->
+                    <!-- justify-content-end: căn phần tử cuối cùng về phía cuối cùng của thanh điều hướng -->
+                    <!-- flex-grow-1: phần tử sẽ mở rộng ra toàn bộ không gian còn trống -->
+                    <!-- pe-3: padding theo chiều ngang 3rem -->
                     <ul class="navbar-nav align-items-center justify-content-end flex-grow-1 pe-3">
+                        <!-- nav-item: định dạng một mục trong thanh điều hướng của thanh navbar. -->
+                        <!-- Mỗi nav-link là một trang web mà người dùng có thể sử dụng để điều hướng đến các trang tương ứn -->
+                        <!-- active: đánh dấu một mục là mục hiện tại -->
                         <li class="nav-item">
-                            <a class="nav-link active px-3" aria-current="page" href="#">Trang chủ</a>
+                            <a class="nav-link active px-3" href="#">Trang chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link px-3" href="cars.html">Xe</a>
+                            <a class="nav-link px-3" href="cars.html">Xe</a> 
                         </li>
                         <li class="nav-item">
                             <a class="nav-link px-3" href="#pricing">Giá</a>
@@ -72,15 +93,21 @@
                         </li>
                     </ul>
 
-                    <div class="d-flex mt-5 mt-lg-0 ps-xl-5 align-items-center justify-content-center ">
-                        <ul class="navbar-nav justify-content-end align-items-center">
+                    <!-- d-flex: giúp cho element trên cùng 1 hàng 1 cột  (mặc định 1 hàng) -->
+                    <!-- align-items-center: căn giữa các phần tử theo chiều dọc -->
+                    <!-- justify-content-center: căn giữa chiều ngang -->
+                    <div class="d-flex align-items-center justify-content-center ">
+                        <!-- navbar-nav: định dạng các phần tử là một danh sách các mục trong thanh điều hướng của thanh navbar. -->
+                        <ul class="navbar-nav">
+                            <!-- nav-item: định dạng một mục trong thanh điều hướng của thanh navbar. -->
                             <li class="nav-item">
-                                <a class="nav-link px-3" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <a class="nav-link px-3" href="#">
                                     Đăng nhập </a>
                             </li>
                         </ul>
-                        <button type="button" class="btn btn-outline-primary nav-button mx-3" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal2"> Đăng ký </button>
+                        <!-- btn: class bootstrap -->
+                        <!-- btn-outline-primary: css -->
+                        <button type="button" class="btn btn-outline-primary" > Đăng ký </button>
                     </div>
                 </div>
             </div>
@@ -88,17 +115,15 @@
     </nav>
 
     <!-- hero section start  -->
-    <section id="hero" class=" position-relative overflow-hidden">
-        <div class="pattern-overlay pattern-right position-absolute">
-            <img src="images/hero-pattern-right.png" alt="pattern">
-        </div>
-        <div class="pattern-overlay pattern-left position-absolute">
-            <img src="images/hero-pattern-left.png" alt="pattern">
-        </div>
+    <!-- Thẻ section: Thẻ section sẽ định nghĩa các phần trong trang, chẳng hạn như các chương, danh mục
+        , tiêu đề, footer hoặc bất cứ phần nào của trang -->
+    <section id="hero">
         <div class="hero-content container text-center">
             <div class="row">
-                <div class="detail mb-4">
+                <!-- mb-4: margin bottom -->
+                <div class="mb-4">
                     <h1 class="">Tìm kiếm<span class="text-primary"> mẫu xe yêu thích </span> </h1>
+                    <!-- hero-paragraph: css -->
                     <p class="hero-paragraph">Chúng tôi có bộ sưu tập xe tốt nhất dành cho bạn</p>
                 </div>
             </div>
@@ -107,15 +132,23 @@
 
     <!-- search section start  -->
     <section id="search">
+        <!-- search-block: o file css -->
+        <!-- p-5: padding 5 -->
         <div class="container search-block p-5">
-
             <form class="row">
+                <!-- col-12: chiem 12 cột -->
+                <!-- col-md-16 chiếm 6 cột trên màn >= md--> 
+                <!-- col-lg-3: chiếm 3 cột trên màn >= lg -->
+                <!-- mt-4 margin top 4 -->
+                <!-- mt-lg-10: mgin 0 voi large -->
                 <div class="col-12 col-md-6 col-lg-3 mt-4 mt-lg-0">
-                    <label for="vehicle" class="label-style text-capitalize form-label">Mẫu xe</label>
-                    <div class="input-group date ">
-                        <!-- <input type="text" class="form-control p-3 " id="vehicle" placeholder="Select Car Group" /> -->
-                        <select class="form-select form-control p-3" id="vehicle" aria-label="Default select example"
-                            style="background-image: none;">
+                    <!-- label-style: css -->
+                    <label for="vehicle" class="label-style">Mẫu xe</label>
+                    <!-- input-group: tạo một nhóm các phần tử input để chúng có thể được sử dụng cùng nhau -->
+                    <div class="input-group">
+                        <!-- form-select: tạo một dropdown list -->
+                        <!-- p-3: padding 3 -->
+                        <select class="form-select p-3" id="vehicle" style="background-image: none;">
                             <option selected>Lựa chọn mẫu xe yêu thích</option>
                             <option value="1">BMW x3</option>
                             <option value="2">BMW M2</option>
@@ -125,14 +158,15 @@
                             <option value="6">Thể thao car</option>
                             <option value="7">Tesla</option>
                         </select>
+                        <!-- position-absolute: định vị vị trí của 1 phần tử so với cha gần nhất -->
                         <span class="search-icon-position position-absolute p-3 ">
                             <iconify-icon class="search-icons" icon="solar:bus-outline"></iconify-icon>
                         </span>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3 mt-4 mt-lg-0">
-                    <label for="location" class="label-style text-capitalize form-label">Địa điểm</label>
-                    <div class="input-group date">
+                    <label for="location" class="label-style">Địa điểm</label>
+                    <div class="input-group">
                         <input type="text" class="form-control p-3 position-relative" id="location"
                             placeholder="Sân bay hoặc bất kỳ đâu" />
                         <span class="search-icon-position position-absolute p-3 ">
@@ -142,24 +176,24 @@
 
                     </div>
                 </div>
+                
                 <div class="col-12 col-md-6 col-lg-3 mt-4 mt-lg-0">
-                    <label for="pick-up-date" class="label-style text-capitalize form-label">Ngày nhận</label>
+                    <label for="pick-up-date" class="label-style">Ngày nhận</label>
                     <div class="input-group date" id="datepicker1">
                         <input type="text" class="form-control p-3" id="pick-up-date" />
-
+                        <!-- Need to explain -->
                         <span class="input-group-append">
                             <span class="search-icon-position position-absolute p-3">
                                 <iconify-icon class="search-icons" icon="solar:calendar-broken"></iconify-icon>
                             </span>
                         </span>
-
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3 mt-4 mt-lg-0">
-                    <label for="return-date" class="label-style text-capitalize form-label">Ngày trả</label>
+                    <label for="return-date" class="label-style">Ngày trả</label>
                     <div class="input-group date" id="datepicker2">
                         <input type="text" class="form-control p-3" id="return-date" />
-
+                        <!-- Need to explain -->
                         <span class="input-group-append">
                             <span class="search-icon-position position-absolute p-3">
                                 <iconify-icon class="search-icons" icon="solar:calendar-broken"></iconify-icon>
@@ -169,8 +203,12 @@
                     </div>
                 </div>
             </form>
-
+            <!-- d-grid: tạo một grid layout -->
+            <!-- gap-2: tạo khoảng cách giữa các phần tử là 2rem -->
+            <!-- mt-4: margin top 4 -->
             <div class="d-grid gap-2 mt-4">
+                <!-- btn: css -->
+                <!-- btn-primary: màu nền xanh -->
                 <button class="btn btn-primary " type="button">Tìm kiếm ngay bây giờ</button>
             </div>
         </div>
@@ -179,12 +217,25 @@
 
     <!-- process section start  -->
     <section id="process">
+        <!-- process-content: css -->
         <div class=" process-content container">
+            <!-- text-center: căn giữa theo chiều ngang -->
+            <!-- my-5: margin top và bottom 5 -->
             <h2 class=" text-center my-5 pb-5">Quy trình <span class="text-primary"> làm việc</span> </h2>
+            <!-- progress-line: css -->
+            <!-- thẻ hr: taoj 1 divider-->
             <hr class="progress-line">
+            <!-- row: tạo một hàng -->
+            <!-- process-block: css -->
             <div class="row process-block">
+                <!-- col-6: chiếm 6 cột -->
+                <!-- col-lg-3: chiếm 3 cột trên màn >= lg -->
+                <!-- text-start: căn trái -->
+                <!-- my-4: margin top và bottom 4 -->
                 <div class="col-6 col-lg-3 text-start my-4">
+                    <!-- bullet: css quả cầu hình tròn tròn-->
                     <div class="bullet"></div>
+                    <!-- text-uppercase: chữ in hoa -->
                     <h5 class="text-uppercase mt-5"> Lựa chọn phương tiện</h5>
                 </div>
 
@@ -212,23 +263,31 @@
     <!-- rental section start  -->
     <section id="rental" class="position-relative">
         <div class="container my-5 py-5">
-            <h2 class=" text-center my-5">cNhững mẫu xe <span class="text-primary"> có sẵn </span> </h2>
-
+            <h2 class=" text-center my-5">Những mẫu xe <span class="text-primary"> có sẵn </span> </h2>
+            <!-- swiper-button-next, rental-arrow: css -->
+            <!-- rental-swiper-next: click vào sẽ dịch item -->
             <div class="swiper-button-next rental-swiper-next  rental-arrow position-absolute"></div>
             <div class="swiper-button-prev rental-swiper-prev rental-arrow position-absolute"></div>
-
+            <!-- swiper-container: tạo một container cho swiper -->
+            <!-- swiper-wrapper: tạo một wrapper cho các slide -->
             <div class="swiper rental-swiper mb-5">
                 <div class="swiper-wrapper">
-
+                    <!-- swiper-slide: tạo một slide -->
                     <div class="swiper-slide">
                         <div class="card">
+                            <!-- card-img-top: css -->
                             <a href="car-single.html"><img src="images/car1.png" class="card-img-top" alt="..."></a>
                             <div class="card-body p-4">
                                 <a href="car-single.html">
                                     <h4 class="card-title">BMW x3</h4>
                                 </a>
                                 <div class="card-text ">
+                                    <!-- d-flex: giúp cho container linh hoạt theo chiều ngang, -->
+                                    <!-- list-unstyled: bỏ dấu chấm -->
+                                    <!-- Thẻ ul: tạo danh sách ko thứ tự -->
                                     <ul class="d-flex list-unstyled">
+                                        <!-- thẻ li: xác đinj item trong ul -->
+                                        <!-- rental-list: css -->
                                         <li class="rental-list">
                                             Thể thao
                                         </li>
@@ -240,12 +299,17 @@
                                         <li class="rental-list"> 4 Ghế ngồi </li>
                                         <li class="rental-list"> <img src="images/dot.png" class="px-3" alt="image">
                                         </li>
-                                        <li class="rental-list display-small"> Dầu </li>
+                                        <li class="rental-list"> Dầu </li>
                                     </ul>
                                 </div>
+                                <!-- Thẻ hr: tạo đường ngang -->
                                 <hr>
+                                <!-- d-flex: giúp cho container linh hoạt theo chiều ngang, -->
+                                <!-- justify-content-between: căn 2 phần tử về 2 phía -->
                                 <div class="d-flex justify-content-between">
+                                    <!-- pt-2: padding top 2 -->
                                     <h3 class="pt-2">$369 <span class="rental-price">/Ngày</span></h3>
+                                    <!-- btn: css -->
                                     <a href="car-single.html" class="btn btn-primary">Thuê ngay </a>
                                 </div>
 
@@ -419,8 +483,6 @@
 
         </div>
 
-
-
     </section>
 
 
@@ -428,37 +490,62 @@
     <section id="pricing">
         <div class=" container  py-5 my-5">
             <h2 class=" text-center my-5">Xem  <span class="text-primary">bản giá</span> </h2>
-
+            <!-- d-flex: giúp cho container linh hoạt theo chiều ngang, -->
+            <!-- justify-content-center: căn giữa theo chiều ngang -->
             <div class="d-flex justify-content-center">
                 <label class="pt-2" id="monthly-label">Theo tháng</label>
+                <!-- form-check: tạo một checkbox -->
+                <!-- form-switch: checkbox có giao diện như 1 switch -->
+                <!-- p-0: padding 0 -->
                 <span class="form-check form-switch p-0">
-                    <input class="form-check-input mx-2" type="checkbox" role="switch" id="flexSwitchCheckChecked"
-                        checked>
+                    <!-- input: tạo trườnh nhậpu dữ liệu -->
+                    <!-- form-check-input: tạo một checkbox -->
+                    <!-- mx-2: margin left và right 2 -->
+                    <!-- form-check-input: tạo một checkbox -->
+                    <!-- role="switch": xác định vai trò của phần tử -->
+                    <!-- checked: xác định phần tử được chọn -->
+                    <input class="form-check-input mx-2" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                    <!-- label: tạo một nhãn cho input -->
+                    <!-- pt-2: padding top 2 -->
+                    <!-- for: xác định trường input mà label này liên kết đến -->
                     <label class="pt-2" id="yearly-label" for="flexSwitchCheckChecked">Theo năm</label>
                 </span>
             </div>
 
-
+            <!-- row: tạo một hàng -->
+            <!-- py-4: padding top và bottom 4 -->
             <div class="row py-4">
-                <div class="  col-lg-3 col-sm-6 col-12 pb-4">
+                <!-- col-lg-3: chiếm 3 cột trên màn >= lg -->
+                <!-- col-sm-6: chiếm 6 cột trên màn >= sm -->
+                <!-- col-12: chiếm 12 cột -->
+                <!-- pb-4: padding bottom 4 -->
+                <div class="col-lg-3 col-sm-6 col-12 pb-4">
+                    <!-- pricing-lable: css -->
+                    <!-- pt-5: padding top 5 -->
                     <div class=" pricing-lable pt-5 ">
+                        <!-- pt-3: padding top 3 -->
+                        <!-- ps-2: padding start 2 -->
                         <div class="pt-3 ps-2">
                             <h3>Tiết kiệm bằng cách sử dụng dịch vụ chúng tôi</h3>
                             <p>Tiết kiệm hơn những gì bạn suy nghĩ.</p>
                         </div>
-
+                        <!-- iconify-icon: tạo icon -->
+                        <!-- pricing-lable-icon: css -->
                         <iconify-icon class="pricing-lable-icon "
                             icon="fluent:vehicle-car-profile-ltr-20-regular"></iconify-icon>
-
-
                     </div>
                 </div>
-
+                <!-- col-lg-3: chiếm 3 cột trên màn >= lg -->
+                <!-- col-sm-6: chiếm 6 cột trên màn >= sm -->  
+                <!-- col-12: chiếm 12 cột -->
+                <!-- pb-4: padding bottom 4 -->
                 <div class=" col-lg-3 col-sm-6 col-12 pb-4">
+                    <!-- pricing-detail: css -->
+                    <!-- pt-5: padding top 5 -->
+
                     <div class=" pricing-detail py-5  text-center">
                         <div class="pricing-content">
                             <h5>Cơ bản</h5>
-
                             <div class="content monthly pt-2">
                                 <h3>$29.50</h3>
                             </div>
@@ -472,15 +559,18 @@
                                 <p>✓ Hỗ trợ khách hàng cơ bản</p>
                                 <p>✓ Bảo hiểm cơ bản</p>
                             </div>
-
                         </div>
-
+                        <!-- css -->
                         <div class="pricing-button">
                             <button class="btn btn-primary">Chọn ngay </button>
                         </div>
                     </div>
                 </div>
 
+                <!-- col-lg-3: chiếm 3 cột trên màn >= lg -->
+                <!-- col-sm-6: chiếm 6 cột trên màn >= sm -->
+                <!-- col-12: chiếm 12 cột -->
+                <!-- pb-4: padding bottom 4 -->
                 <div class=" col-lg-3 col-sm-6 col-12 pb-4">
                     <div class=" pricing-detail py-5  text-center">
                         <div class="pricing-content">
@@ -506,7 +596,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class=" col-lg-3 col-sm-6 col-12 pb-4">
                     <div class=" pricing-detail py-5  text-center">
                         <div class="pricing-content">
@@ -544,13 +633,26 @@
 
     <!-- Footer -->
     <section id="footer">
+        <!-- need to explain -->
         <div class="container footer-container mt-5">
+            <!-- tạo footer -->
+            <!-- row Tạo 1 hàng -->
+            <!-- row-cols-1: chia 1 cột -->
+            <!-- row-cols-sm-2: chia 2 cột trên màn >= sm -->
+            <!-- row-cols-md-5: chia 5 cột trên màn >= md -->
+            <!-- my-5: margin top và bottom 5 -->
+            <!-- py-5: padding top và bottom 5 -->
             <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 my-5 py-5 ">
-
+                <!-- col-md-4: chiếm 4 cột trên màn >= md -->
+                <!-- mt-5: margin top 5 -->
+                <!-- mt-md-0: margin top 0 trên màn >= md -->
                 <div class=" col-md-4 mt-5 mt-md-0 ">
                     <img src="images/logo.png" alt="image">
                     <p class="py-3">Chuyên nghiệp từng dặm đường đi - Cho mỗi hành trình của bạn!</p>
                     <div class="d-flex align-items-center ">
+                        <!-- target: xác định tài nguyên liên kết khi đc nhấtn vào -->
+                        <!-- target="_blank": mở liên kết trong tab mới -->
+                        <!-- social: css -->
                         <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
                                 icon="mdi:facebook"></iconify-icon></a>
                         <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
@@ -562,11 +664,19 @@
                         <a href="#" target="_blank"><iconify-icon class="social-link-icon pe-4"
                                 icon="mdi:youtube"></iconify-icon></a>
                     </div>
-
                 </div>
-
+                
+                <!-- Chiếm 7 cột màn >= md -->
+                <!-- offsetL tại offset bên trái thiết bị >= md -->
                 <div class="col-md-7 offset-md-1 mt-5">
+                    <!-- footer-nav: css -->
+                    <!-- list_unstyle: loại bỏ các style của các danh sách mặc định (bỏ mấy cái dấu . ở đầu)-->
                     <ul class="footer-nav list-unstyled ">
+                        <!-- nav-item: định dạng một mục trong thanh điều hướng của thanh navbar. -->
+                        <!-- Mỗi nav-link là một trang web mà người dùng có thể sử dụng để điều hướng đến các trang tương ứn -->
+                        <!-- active: đánh dấu một mục là mục hiện tại -->
+                        <!-- me: margin bên phải -->
+                        <!-- mb: margin bottom -->
                         <li class="nav-item me-2 mb-3">
                             <a class="nav-link px-4" aria-current="page" href="#">Trang chủ</a>
                         </li>

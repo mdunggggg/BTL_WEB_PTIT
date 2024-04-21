@@ -89,6 +89,7 @@
 </nav>
 
   <!-- hero section start  -->
+  <!-- overfllow hidden: ẩn đi phần thừa -->
   <section id="hero" class=" position-relative overflow-hidden">
     <div class="pattern-overlay pattern-right position-absolute">
       <img src="images/hero-pattern-right.png" alt="pattern">
@@ -112,6 +113,7 @@
   <section id="cars" class="my-5 py-5">
     <div class="container">
       <div class="row">
+        <!-- col-md-4: chiếm 4 cột màn md: 4/12 = 1/3  -->
         <div class="col-md-4 my-4">
           <div class="card">
             <a href="car-single.html"><img src="images/blog1.jpg" class="card-img-top" alt="..."></a>
@@ -121,7 +123,8 @@
               </a>
               <div class="card-text ">
                 <ul class="d-flex list-unstyled">
-                  <li class="rental-list">
+                  <!-- rentail-list : css -->
+                  <li class="rental-list"> 
                     Thể thao
                   </li>
                   <li class="rental-list"> <img src="images/dot.png" class="px-3" alt="image"></li>
@@ -133,6 +136,8 @@
                 </ul>
               </div>
               <hr>
+              <!-- d-flex ???? -->
+              <!-- justify-content-between:  -->
               <div class="d-flex justify-content-between">
                 <h3 class="pt-2">$369 <span class="rental-price">/Ngày</span></h3>
                 <a href="car-single.html" class="btn btn-primary">Thuê ngay </a>
@@ -375,22 +380,22 @@
         </div>
 
       </div>
-      <nav aria-label="Page navigation" class="d-flex justify-content-center mt-5">
+      <nav class="d-flex justify-content-center mt-5">
         <ul class="pagination">
           <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
-              <iconify-icon icon="solar:arrow-left-linear" class="pagination-arrow"></iconify-icon>
+            <a class="page-link" href="#">
+              <iconify-icon icon="solar:arrow-left-linear"></iconify-icon>
             </a>
           </li>
-          <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a>
+          <li class="page-item active"><a class="page-link" href="#">1</a>
           </li>
           <li class="page-item"><a class="page-link" href="#">2</a></li>
           <li class="page-item"><a class="page-link" href="#">3</a></li>
           <li class="page-item"><a class="page-link" href="#">4</a></li>
           <li class="page-item"><a class="page-link" href="#">5</a></li>
           <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-              <iconify-icon icon="solar:arrow-right-linear" class="pagination-arrow"></iconify-icon> </a>
+            <a class="page-link" href="#">
+              <iconify-icon icon="solar:arrow-right-linear"></iconify-icon> </a>
           </li>
         </ul>
       </nav>
